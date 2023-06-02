@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course 365 - Learning with unlimited!</title>
+  
+  <!-- Nhúng các thư viện BS4 & jQuery, awesome font -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- Các file css và js tự định nghĩa thêm -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <!-- 1. Header - Navbar menu -->
+    <div class="container-fluid">
+      <div class="row form-group">
+        <div class="col-sm-12">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a href="index.html">
+              <img src="images/Ionic_logo.png" alt="...">
+            </a>
+            <div class="collapse navbar-collapse ml-4 form-inline pading-left">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="Task_38.31.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Browse courses
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Web Development</a>
+                    <a class="dropdown-item" href="#">Mobile App</a>
+                    <a class="dropdown-item" href="#">Desktop App</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About us
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Vision & Mission</a>
+                    <a class="dropdown-item" href="#">Team</a>
+                    <a class="dropdown-item" href="#">Contact Us</a>
+                  </div>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 2. Slide body -->
+    <div class="container-fluid pading-top bg-info">
+      <div class="container text-white">
+        <div class="row form-group">
+          <div class="col-sm-6 my-auto">
+            <h1>Wellcome to lonic Course365 Learning Center</h1>
+            <p>lonic Course365 is an online learning and teaching marketplace with over <br>5000 courses and 1 million students. Instructor and expertly crafted course,<br>designed for the modern student and entrepreneur.</p>
+            <button type="button" class="btn btn-warning mr-3">Browse Courses</button>
+            <button type="button" class="btn btn-light">Become an Instructor</button>
+          </div>
+          <div class="col-sm-6">
+            <img src="images/ionic-207965.png" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 3. Courses content -->
+    <div class="container-fluid mt-5">
+      <!-- 3.1 Recommended to you -->
+      <div class="container">
+        <div class="row form-group">
+          <div class="col-sm-4">
+            <h2><b>Recommended to you</b></h2>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-sm-3">
+            <div class="card">
+              <img src="images/courses/course-angular.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="#">How to easily create <br>a website with Angular</a>
+                <p class="card-text"><i class="fa-regular fa-clock"></i> 3h 56m Beginner</p>
+                <p>$600 <del class="text-secondary">$750</del></p>
+              </div>
+              <div class="card-footer">
+                <div class="row mx-auto">
+                  <img src="images/teacher/morris_mccoy.jpg" alt="..." class="rounded-circle" width="20%">
+                  <p class="m-auto">Morris Mccoy</p>
+                  <i class="fa-regular fa-bookmark m-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <img src="images/courses/course-python.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="#">The Python Course: build web application</a>
+                <p class="card-text"><i class="fa-regular fa-clock"></i> 4h 30m Advanced</p>
+                <p>$900 <del class="text-secondary">$1050</del></p>
+              </div>
+              <div class="card-footer">
+                <div class="row mx-auto">
+                  <img src="images/teacher/claire_robertson.jpg" alt="..." class="rounded-circle" width="20%">
+                  <p class="m-auto">Claire Robertson</p>
+                  <i class="fa-regular fa-bookmark m-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <img src="images/courses/course-graphql.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="#">GraphQl: Introduction to GraphQl for Beginner</a>
+                <p class="card-text"><i class="fa-regular fa-clock"></i> 2h 15m Intermediate</p>
+                <p>$650 <del class="text-secondary">$850</del></p>
+              </div>
+              <div class="card-footer">
+                <div class="row mx-auto">
+                  <img src="images/teacher/ted_hawkins.jpg" alt="..." class="rounded-circle" width="20%">
+                  <p class="m-auto">Ted Hawkins</p>
+                  <i class="fa-regular fa-bookmark m-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <img src="images/courses/course-javascript.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="#">Getting Started with <br> JavaScript</a>
+                <p class="card-text"><i class="fa-regular fa-clock"></i> 3h 34m Beginner</p>
+                <p>$300 <del class="text-secondary">$550</del></p>
+              </div>
+              <div class="card-footer">
+                <div class="row mx-auto">
+                  <img src="images/teacher/ted_hawkins.jpg" alt="..." class="rounded-circle" width="20%">
+                  <p class="m-auto">Ted Hawkins</p>
+                  <i class="fa-regular fa-bookmark m-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 3.2 Most Popular -->
+      <div class="container mt-5">
+        <div class="row form-group">
+          <div class="col-sm-4">
+            <h2><b>Most Popular</b></h2>
+          </div>
+        </div>
+        <div class="row form-group content-popular">
+          <div class="col-sm-3">
+            <div class="card">
+              <img src="images/courses/course-css.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="#">CSS: Ultimate CSS course from Beginner to Advanced</a>
+                <p class="card-text"><i class="fa-regular fa-clock"></i> 3h 56m Beginner</p>
+                <p>$600 <del class="text-secondary">$750</del></p>
+              </div>
+              <div class="card-footer">
+                <div class="row mx-auto">
+                  <img src="images/teacher/juanita_bell.jpg" alt="..." class="rounded-circle" width="20%">
+                  <p class="m-auto">Juanita Bell</p>
+                  <i class="fa-regular fa-bookmark m-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <img src="images/courses/course-javascript.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="#">Getting Started with <br> JavaScript</a>
+                <p class="card-text"><i class="fa-regular fa-clock"></i> 4h 30m Advanced</p>
+                <p>$300 <del class="text-secondary">$550</del></p>
+              </div>
+              <div class="card-footer">
+                <div class="row mx-auto">
+                  <img  src="images/teacher/ted_hawkins.jpg" alt="..." class="rounded-circle" width="20%">
+                  <p class="m-auto">Ted Hawkins</p>
+                  <i class="fa-regular fa-bookmark m-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <img src="images/courses/course-wordpress.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="#">Complete Wordpress themes & pilugins</a>
+                <p class="card-text"><i class="fa-regular fa-clock"></i> 2h 15m Intermediate</p>
+                <p>$900 <del class="text-secondary">$1050</del></p>
+              </div>
+              <div class="card-footer">
+                <div class="row mx-auto">
+                  <img src="images/teacher/clevaio_simon.jpg" alt="..." class="rounded-circle" width="20%">
+                  <p class="m-auto">Clevaio Simon</p>
+                  <i class="fa-regular fa-bookmark m-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <img src="images/courses/course-graphql.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="#">GraphQl: Introduction to GraphQl for Beginner</a>
+                <p class="card-text"><i class="fa-regular fa-clock"></i> 3h 34m Beginner</p>
+                <p>$650 <del class="text-secondary">$850</del></p>
+              </div>
+              <div class="card-footer">
+                <div class="row mx-auto">
+                  <img src="images/teacher/ted_hawkins.jpg" alt="..." class="rounded-circle" width="20%">
+                  <p class="m-auto">Ted Hawkins</p>
+                  <i class="fa-regular fa-bookmark m-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 3.3 Trending -->
+      <div class="container mt-5">
+        <div class="row form-group">
+          <div class="col-sm-4">
+            <h2><b>Trending</b></h2>
+          </div>
+        </div>
+        <div class="row form-group content-trending">
+          <div class="col-sm-3">
+            <div class="card">
+              <img src="images/courses/course-javascript.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="#">Getting Started with <br> JavaScript</a>
+                <p class="card-text"><i class="fa-regular fa-clock"></i> 3h 56m Beginner</p>
+                <p>$600 <del class="text-secondary">$550</del></p>
+              </div>
+              <div class="card-footer">
+                <div class="row mx-auto">
+                  <img src="images/teacher/ted_hawkins.jpg" alt="..." class="rounded-circle" width="20%">
+                  <p class="m-auto">Ted Hawkins</p>
+                  <i class="fa-regular fa-bookmark m-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <img src="images/courses/course-angular.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="#">How to easily create a website with Angular</a>
+                <p class="card-text"><i class="fa-regular fa-clock"></i> 4h 30m Advanced</p>
+                <p>$600 <del class="text-secondary">$750</del></p>
+              </div>
+              <div class="card-footer">
+                <div class="row mx-auto">
+                  <img src="images/teacher/morris_mccoy.jpg" alt="..." class="rounded-circle" width="20%">
+                  <p class="m-auto">Morris Mccoy</p>
+                  <i class="fa-regular fa-bookmark m-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <img src="images/courses/course-css.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="#">GraphQl: Introduction to GraphQl for Beginner</a>
+                <p class="card-text"><i class="fa-regular fa-clock"></i> 2h 15m Intermediate</p>
+                <p>$600 <del class="text-secondary">$750</del></p>
+              </div>
+              <div class="card-footer">
+                <div class="row mx-auto">
+                  <img src="images/teacher/juanita_bell.jpg" alt="..." class="rounded-circle" width="20%">
+                  <p class="m-auto">Juanita Bell</p>
+                  <i class="fa-regular fa-bookmark m-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <img src="images/courses/course-python.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="#">The Python Course: Build web application</a>
+                <p class="card-text"><i class="fa-regular fa-clock"></i> 3h 34m Beginner</p>
+                <p>$900 <del class="text-secondary">$1050</del></p>
+              </div>
+              <div class="card-footer">
+                <div class="row mx-auto">
+                  <img src="images/teacher/claire_robertson.jpg" alt="..." class="rounded-circle" width="20%">
+                  <p class="m-auto">Claire Robertson</p>
+                  <i class="fa-regular fa-bookmark m-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 4. Footer -->
+    <div class="container mt-5 mb-2">
+      <div class="row">
+        <div class="col-sm-6">© 2021 Ionic Course365. All Rights Reserved.</div>
+        <div class="col-sm-6 text-right">
+          <a href="#" class="mr-3">Privacy</a>
+          <a href="#" class="mr-3">Terms</a>
+          <a href="#" class="mr-3">Feedback</a>
+          <a href="#" class="mr-3">Support</a>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

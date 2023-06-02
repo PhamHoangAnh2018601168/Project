@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang quản trị</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Import Datatable sau jquery -->
+    <!-- Import them style bootstrap cho datatable -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h2 class="text-center m-4">Quản trị khóa học</h2>
+        <button class="btn btn-success mb-3" id="btn-add-course">Thêm khóa học</button>
+        <table class="table table-hover table-bordered table-striped" id="course-table">
+            <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Course Code</th>
+                  <th>Course Name</th>
+                  <th>Course Image</th>
+                  <th>Price</th>
+                  <th>Discount Price</th>
+                  <th>Duration</th>
+                  <th>Level</th>
+                  <th>Teacher Name</th>
+                  <th>Teacher Image</th>
+                  <th>Is Popular</th>
+                  <th>Is Trending</th>
+                  <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal thêm mới khóa học -->
+    <div>
+        <div id="create-course-modal" class="modal fade" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="h5-modal-title">Thêm Khóa Học</h5>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Course Code</label>
+                                    <input id="inp-course-code" type="text" class="col-7 form-control" placeholder="Course Code">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Course Name</label>
+                                    <input id="inp-course-name" type="text" class="col-7 form-control" placeholder="Course Name">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Course Image</label>
+                                    <input id="inp-course-image" type="text" class="col-7 form-control" placeholder="Course Image">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Price</label>
+                                    <input id="inp-price" type="text" class="col-7 form-control" placeholder="Price">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Discount Price</label>
+                                    <input id="inp-discount-price" type="text" class="col-7 form-control" placeholder="Discount Price">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Duration</label>
+                                    <input id="inp-duration" type="text" class="col-7 form-control" placeholder="Duration">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Level</label>
+                                    <input id="inp-level" type="text" class="col-7 form-control" placeholder="Level">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Teacher Name</label>
+                                    <input id="inp-teacher-name" type="text" class="col-7 form-control" placeholder="Teacher Name">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Teacher Image</label>
+                                    <input id="inp-teacher-image" type="text" class="col-7 form-control" placeholder="Teacher Image">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Is Popular</label>
+                                    <input id="inp-is-popular" type="text" class="col-7 form-control" placeholder="Is Popular">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Is Trending</label>
+                                    <input id="inp-is-trending" type="text" class="col-7 form-control" placeholder="Is Trending">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="btn-create-cancel" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success ml-3 btn-create">Create new course</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal edit mới khóa học -->
+    <div>
+        <div id="edit-course-modal" class="modal fade" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="h5-modal-title">Sửa Khóa Học</h5>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Course Code</label>
+                                    <input id="edit-course-code" type="text" class="col-7 form-control" placeholder="Course Code">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Course Name</label>
+                                    <input id="edit-course-name" type="text" class="col-7 form-control" placeholder="Course Name">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Course Image</label>
+                                    <input id="edit-course-image" type="text" class="col-7 form-control" placeholder="Course Image">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Price</label>
+                                    <input id="edit-price" type="text" class="col-7 form-control" placeholder="Price">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Discount Price</label>
+                                    <input id="edit-discount-price" type="text" class="col-7 form-control" placeholder="Discount Price">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Duration</label>
+                                    <input id="edit-duration" type="text" class="col-7 form-control" placeholder="Duration">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Level</label>
+                                    <input id="edit-level" type="text" class="col-7 form-control" placeholder="Level">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Teacher Name</label>
+                                    <input id="edit-teacher-name" type="text" class="col-7 form-control" placeholder="Teacher Name">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Teacher Image</label>
+                                    <input id="edit-teacher-image" type="text" class="col-7 form-control" placeholder="Teacher Image">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Is Popular</label>
+                                    <input id="edit-is-popular" type="text" class="col-7 form-control" placeholder="Is Popular">
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-4 label-form-control ml-2">Is Trending</label>
+                                    <input id="edit-is-trending" type="text" class="col-7 form-control" placeholder="Is Trending">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="btn-create-cancel" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success ml-3 btn-update">Update course</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal delete mới khóa học -->
+    <div>
+        <div class="modal fade" tabindex="-1" id="delete-confirm-modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="h5-modal-title">Course Delete Confirmation</h5>
+                <button class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <label>Bạn có chắc chắn muốn xóa Course này không?</label>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-danger" id="btn-confirm-delete-course">Confirm</button>
+                <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+
+<!-- Các file css và js tự định nghĩa thêm -->
+<script src="script.js"></script>
+</html>
